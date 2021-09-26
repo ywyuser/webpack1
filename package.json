@@ -7,11 +7,8 @@
   "description": "",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config webpack.prod.js",
-    "watch": "webpack --watch",
-    "start": "webpack-dev-server --open --config webpack.dev.js",
-    "server": "node server.js"
+    "build": "webpack",
+    "start": "http-server dist"
   },
   "keywords": [],
   "author": "",
@@ -22,15 +19,19 @@
     "csv-loader": "^3.0.3",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.2",
+    "http-server": "^13.0.2",
     "style-loader": "^3.3.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^5.53.0",
     "webpack-cli": "^4.8.0",
     "webpack-dev-server": "^4.2.1",
     "webpack-merge": "^5.8.0",
+    "workbox-webpack-plugin": "^6.3.0",
     "xml-loader": "^1.2.1"
   },
   "dependencies": {
-    "lodash": "^4.17.21"
+    "babel-polyfill": "^6.26.0",
+    "lodash": "^4.17.21",
+    "whatwg-fetch": "^3.6.2"
   }
 }

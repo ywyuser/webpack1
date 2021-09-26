@@ -5,19 +5,20 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
-        main: './src/index.js',
-         vendor: [
-               'lodash'
-             ]
+        polyfills: './src/polyfills.js',
+        index: './src/index.js'
+    },
+    output: {
+        filename: '[name].bundle.js',
     },
     plugins: [
-        new CleanWebpackPlugin(),
-        new HtmlWebpackPlugin({
-            title: 'Caching'
-        }),
+        // new CleanWebpackPlugin(),
+        // new HtmlWebpackPlugin({
+        //     title: 'Caching'
+        // }),
     ],
     optimization: {
-        moduleIds:'hashed',
+        moduleIds: 'hashed',
         splitChunks: {
             cacheGroups: {
                 commons: {
